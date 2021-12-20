@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Apple : MonoBehaviour
+public class cannonball : MonoBehaviour
 {
     public static float bottomy = -20f;
     // Start is called before the first frame update
@@ -13,13 +13,12 @@ public class Apple : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision col)
     {
-        if (transform.position.y < -20)
+        if (col.gameObject.tag == "basket")
         {
             Destroy(this.gameObject);
-            //ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
-            //apScript.AppleDestroyed();
         }
     }
+
 }

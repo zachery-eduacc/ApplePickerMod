@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Apple
+  - tree
+  - basket
+  - cannonball
+  - cannon1
   layers:
   - Default
   - TransparentFX

@@ -25,6 +25,7 @@ public class AppleTree : MonoBehaviour
 
     void DropApple()
     {
+        _secondsBetweenAppleDrops = Random.Range(0, 2);
         if (_apples.Count >= 2)
         {
             if (_apples[_apples.Count - 2])
@@ -35,7 +36,7 @@ public class AppleTree : MonoBehaviour
         }
         GameObject apple = Instantiate<GameObject>(applePrefab);
         _apples.Add(apple);
-        apple.transform.position = new Vector3(GameObject.FindGameObjectWithTag("tree").transform.position.x, GameObject.FindGameObjectWithTag("tree").transform.position.y, 0);
+        apple.transform.position = new Vector3(GameObject.FindGameObjectWithTag("tree").transform.position.x, GameObject.FindGameObjectWithTag("tree").transform.position.y, 12);
         if (diffLevel > 9)
         {
             Invoke("DropApple", _secondsBetweenAppleDrops - 0.9f);
