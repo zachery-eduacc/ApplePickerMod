@@ -22,7 +22,7 @@ public class health : MonoBehaviour
 
     void TakeDamage(int amount)
     {
-        amount = 1;
+        
         currenthealth -= amount;
 
         if(currenthealth <= 0)
@@ -33,7 +33,7 @@ public class health : MonoBehaviour
     }
      private void OnCollisionEnter(Collision col)
         {
-            if(col.gameObject.tag == "connonball")
+            if(col.gameObject.tag != "Apple")
             {
                 TakeDamage(1);
             }

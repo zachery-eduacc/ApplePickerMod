@@ -18,10 +18,10 @@ public class cannonballmovement : MonoBehaviour
     void FixedUpdate()
     {
         
-        GameObject tre = GameObject.FindGameObjectWithTag("cannonball");
+        //GameObject tre = GameObject.FindGameObjectWithTag("cannonball");
         
-        tre.transform.position = new Vector3((GameObject.FindGameObjectWithTag("cannonball").transform.position.x - 2), GameObject.FindGameObjectWithTag("cannonball").transform.position.y, GameObject.FindGameObjectWithTag("cannonball").transform.position.z);
+        //tre.transform.position = new Vector3((GameObject.FindGameObjectWithTag("cannonball").transform.position.x - 1), GameObject.FindGameObjectWithTag("cannonball").transform.position.y, GameObject.FindGameObjectWithTag("cannonball").transform.position.z);
         
-        
+        this.transform.position = new Vector3((this.transform.position.x - 1), this.transform.position.y, this.transform.position.z);
     }
 }

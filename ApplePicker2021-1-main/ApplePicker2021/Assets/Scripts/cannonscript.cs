@@ -25,7 +25,7 @@ public class cannonscript : MonoBehaviour
 
     void ShootBall()
     {
-        _secondsBetweenCannonShoots = Random.Range(0, 2);
+        _secondsBetweenCannonShoots = Random.Range(1, 2);
         if (_cannonball.Count >= 2)
         {
             if (_cannonball[_cannonball.Count - 2])
